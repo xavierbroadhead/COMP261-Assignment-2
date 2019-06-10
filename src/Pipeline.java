@@ -51,13 +51,13 @@ public class Pipeline {
 		int green = (int) Math.abs(((ambientLight.getGreen()/255.0f * poly.getReflectance().getGreen()) + (lightColor.getGreen()/255.0f * poly.getReflectance().getGreen())) * angle);
 		int blue = (int) Math.abs(((ambientLight.getBlue()/255.0f * poly.getReflectance().getBlue()) + (lightColor.getBlue()/255.0f * poly.getReflectance().getBlue())) * angle);
 		if (red > 255) {
-			red = red - 255;
+			red = 255;
 		}
 		if (green > 255) {
-			green = green - 255;
+			green = 255;
 		}
 		if (blue > 255) {
-			blue = blue - 255;
+			blue = 255;
 		}
 		return new Color(red, green, blue);
 	}
